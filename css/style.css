@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--violet);
+    background-image: url(../images/bg-desktop.svg);
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;;
+}
+
+.wrapper {
+    border: 1px solid red;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 5px;
+    padding-left: 0;
+}
+
+.header > img {
+    width: 150px;
+    height: auto;
+}
+
+.content {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.content .image {
+    margin: 0px;
+    padding: 0px;
+}
+
+.content .image > img {
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.content .post {
+    /* border: 1px solid red; */
+    width: 50%;
+    padding: 45px;
+    padding-right: 40px;
+    margin: 0px;
+}
+
+.content .post > h2 {
+    margin-bottom: 17px;
+    padding: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+}
+
+.content .post > p {
+    margin-bottom: 20px;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.5rem;
+    word-spacing: .08rem;
+}
+
+.content .register-btn {
+    display: block;
+    background-color: #ffffff;;
+    border: transparent;
+    width: 180px;
+    height: 48px;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.03rem;
+    font-weight: 600;
+    color: hsl(257, 40%, 49%);
+}
+
+.footer{
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    /* padding: 0 75px 25px 0px; */
+    padding-bottom: 25px;
+    padding-right: 39px;
+}
+
+.footer .icons i {
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    padding-top: 8px;
+    border: 1.495px solid #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.08rem;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 375px) {
+    body {
+        background-image: url(../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        /* overflow-y: scroll; */
+    }
+    
+    .wrapper {
+        border: 1px solid red;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .header {
+        border: 1px solid red;
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        padding: 5px;
+        /* padding-left: 30px; */
+    }
+
+    .content {
+        /* border: 1px solid red; */
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 70%;
+    }
+
+    .content .image {
+        border: 1px solid blue;
+        height: 40%;
+        text-align: center;
+    }
+
+    .content .image > img {
+        width: auto;
+        height: 225px;
+    }
+
+    .content .post {
+        border: 1px solid red;
+        width: 100%;
+        height: 60%;
+        padding: 15px;
+        margin: 0px;
+    }
+
+    .content .post > h2 {
+        margin-bottom: 15px;
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    .content .post > p {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .content .register-btn {
+        width: 75%;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+    .footer {
+        border: 1px solid yellow;
+        justify-content: center;
+        padding: 0;
+        padding-bottom: 35px;
+    }
+}
