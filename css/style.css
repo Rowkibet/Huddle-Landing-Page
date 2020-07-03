@@ -22,20 +22,19 @@ body {
 }
 
 .wrapper {
-    width: 90%;
     height: 100vh;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid: 
+        ".... header  ...." 100px
+        ".... content ...." 1fr
+        ".... footer  ...." 100px/
+        50px 1fr 50px;
 }
 
 .header {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 5px;
-    padding-left: 0;
+    grid-area: header;
+    padding-top: 30px;
 }
 
 .header > img {
@@ -44,15 +43,22 @@ body {
 }
 
 .content {
+    grid-area: content;
     padding: 0;
     margin: 0;
-    display: flex;
-    overflow: hidden;
+
+    display: grid;
+    grid: 
+        "image post"/
+        650px 1fr;
 }
 
 .content .image {
+    grid-area: image;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .content .image > img {
@@ -64,10 +70,7 @@ body {
 }
 
 .content .post {
-    /* border: 1px solid red; */
-    width: 50%;
-    padding: 45px;
-    padding-right: 40px;
+    grid-area: post;
     margin: 0px;
 }
 
@@ -105,10 +108,10 @@ body {
 }
 
 .footer{
+    grid-area: footer;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    padding-bottom: 25px;
+    align-items: center;
     padding-right: 39px;
 }
 
