@@ -50,7 +50,7 @@ body {
     display: grid;
     grid: 
         "image post"/
-        650px 1fr;
+        650px 614px;
 }
 
 .content .image {
@@ -58,6 +58,7 @@ body {
     margin: 0px;
     padding: 0px;
     display: flex;
+    justify-content: flex-end;
     align-items: flex-end;
 }
 
@@ -72,9 +73,18 @@ body {
 .content .post {
     grid-area: post;
     margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.content .post > h2 {
+.content .post-wrapper {
+    width: 85%;
+    padding: 0;
+    margin: 0;
+}
+
+.content .post .post-wrapper > h2 {
     margin-bottom: 17px;
     padding: 0;
     font-size: 2.5rem;
@@ -82,7 +92,7 @@ body {
     line-height: 3.5rem;
 }
 
-.content .post > p {
+.content .post .post-wrapper > p {
     margin-bottom: 20px;
     padding: 0;
     font-weight: 400;
