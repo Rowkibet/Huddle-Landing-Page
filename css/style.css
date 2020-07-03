@@ -26,15 +26,16 @@ body {
     margin: 0 auto;
     display: grid;
     grid: 
-        ".... header  ...." 100px
-        ".... content ...." 1fr
-        ".... footer  ...." 100px/
-        50px 1fr 50px;
+        "header header"
+        "image  post"
+        "footer footer"/
+        1fr 1fr;
 }
 
 .header {
     grid-area: header;
     padding-top: 30px;
+    padding-left: 60px;
 }
 
 .header > img {
@@ -42,18 +43,7 @@ body {
     height: auto;
 }
 
-.content {
-    grid-area: content;
-    padding: 0;
-    margin: 0;
-
-    display: grid;
-    grid: 
-        "image post"/
-        650px 614px;
-}
-
-.content .image {
+.image {
     grid-area: image;
     margin: 0px;
     padding: 0px;
@@ -62,7 +52,7 @@ body {
     align-items: flex-end;
 }
 
-.content .image > img {
+.image > img {
     display: inline-block;
     width: 90%;
     height: auto;
@@ -70,21 +60,21 @@ body {
     padding: 0;
 }
 
-.content .post {
+.post {
     grid-area: post;
     margin: 0px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
-.content .post-wrapper {
-    width: 85%;
+.post .post-wrapper {
+    width: 75%;
     padding: 0;
     margin: 0;
 }
 
-.content .post .post-wrapper > h2 {
+.post .post-wrapper > h2 {
     margin-bottom: 17px;
     padding: 0;
     font-size: 2.5rem;
@@ -92,7 +82,7 @@ body {
     line-height: 3.5rem;
 }
 
-.content .post .post-wrapper > p {
+.post .post-wrapper > p {
     margin-bottom: 20px;
     padding: 0;
     font-weight: 400;
@@ -100,7 +90,7 @@ body {
     word-spacing: .08rem;
 }
 
-.content .register-btn {
+.post .register-btn {
     display: block;
     background-color: #ffffff;;
     border: transparent;
@@ -122,7 +112,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 39px;
+    padding-right: 110px;
 }
 
 .footer .icons i {
