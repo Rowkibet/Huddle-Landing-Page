@@ -22,12 +22,13 @@ body {
 }
 
 .wrapper {
+    height: 100vh;
     display: grid;
     grid: 
-        "header header" 120px
-        "image  post" 460px
-        "footer footer" 73px/
-        683px 683px;
+        "header header"
+        "image  post"
+        "footer footer"/
+        1fr 1fr;
 }
 
 .header {
