@@ -29,6 +29,7 @@ body {
 .wrapper {
     max-width: 1440px;
     padding: 55px 80px 40px 80px;
+    position: relative;
 }
 
 .header {
@@ -130,8 +131,22 @@ body {
 }
 
 .icons > a:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px)
+}
 
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+footer .attribution { 
+    font-size: 16px; 
+    text-align: center; 
+}
+
+footer .attribution a { 
+    color: hsl(245.4, 91.8%, 14.3%); 
 }
 
 /* MEDIA QUERIES */
@@ -172,6 +187,10 @@ body {
         min-width: 166px;
         padding: 14px;
         font-size: 16px;
+    }
+
+    footer .attribution { 
+        font-size: 13px; 
     }
 }
 
@@ -219,6 +238,10 @@ body {
         width: 35px;
         height: 35px;
         font-size: 17px;
+    }
+
+    footer .attribution { 
+        font-size: 12px; 
     }
 }
 
@@ -294,6 +317,10 @@ body {
         height: 58px;
         font-size: 27px;
     }
+
+    footer .attribution { 
+        font-size: 16px; 
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -349,5 +376,9 @@ body {
         width: 35px;
         height: 35px;
         font-size: 15px;
+    }
+
+    footer .attribution { 
+        font-size: 12px; 
     }
 }
